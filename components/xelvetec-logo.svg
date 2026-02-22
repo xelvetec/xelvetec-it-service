@@ -1,0 +1,54 @@
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" class="xelvetec-logo">
+  <defs>
+    <!-- Glow Effects -->
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <!-- Hexagonal X Gradient -->
+    <linearGradient id="xGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c0c0c0" />
+      <stop offset="50%" stop-color="#e0e0e0" />
+      <stop offset="100%" stop-color="#f0f0f0" />
+    </linearGradient>
+    
+    <!-- Circuit Pattern -->
+    <pattern id="circuitPattern" patternUnits="userSpaceOnUse" width="20" height="20">
+      <path d="M0 10 L20 10 M10 0 L10 20" stroke="#00bfff" stroke-width="0.8" opacity="0.7"/>
+    </pattern>
+  </defs>
+  
+  <!-- 3D Hexagonal X -->
+  <g transform="translate(50,25)">
+    <!-- Back Faces -->
+    <path d="M70 0 L140 40 L140 120 L70 160 L0 120 L0 40 Z" fill="url(#xGradient)" opacity="0.8"/>
+    <path d="M70 0 L140 40 L110 60 L40 20 Z" fill="#a0a0a0"/>
+    <path d="M140 40 L140 120 L110 140 L110 60 Z" fill="#d0d0d0"/>
+    
+    <!-- Front X Shape -->
+    <g transform="translate(20,20) scale(0.8)">
+      <path d="M30 0 L60 30 L30 60 L0 30 Z" fill="url(#xGradient)" filter="url(#neonGlow)"/>
+      <path d="M30 0 L60 30 L45 45 L15 15 Z" fill="#ffffff"/>
+      <path d="M60 30 L30 60 L15 45 L45 15 Z" fill="#e0e0e0"/>
+      
+      <!-- Circuit Lines -->
+      <path d="M15 15 L45 45 M45 15 L15 45" stroke="url(#circuitPattern)" stroke-width="2" stroke-dasharray="2,2">
+        <animate attributeName="stroke-dashoffset" values="0;10" dur="3s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+  
+  <!-- Text -->
+  <text x="180" y="120" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="80" fill="#1a1a2e" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.2)">
+    elveTec
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
+  </text>
+  
+  <!-- Subtle Tagline -->
+  <text x="180" y="150" font-family="'Space Grotesk', sans-serif" font-size="16" fill="#666" letter-spacing="1px">
+    IT SERVICES KREUZLINGEN
+  </text>
+</svg>
+```

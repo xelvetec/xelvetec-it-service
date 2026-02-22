@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns | IT Service Kreuzlingen - XelveTec</title>
+    <meta name="description" content="IT Service Kreuzlingen: Lernen Sie unser Team kennen. Professionelle IT-Dienstleistungen in Kreuzlingen & Thurgau seit 2025.">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0033A0',
+                        secondary: '#00A0E0',
+                        accent: '#E2007A',
+                        neutral: '#F5F5F5',
+dark: '#0A0A0A',
+                        light: '#FFFFFF',
+                    },
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                        mono: ['Space Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+    </style>
+</head>
+<body class="bg-dark text-white font-sans antialiased">
+<custom-top-header></custom-top-header>
+    <custom-header style="margin-top: 40px;"></custom-header>
+<!-- Hero Section -->
+    <section class="hero-section relative py-32 flex items-center justify-center overflow-hidden bg-gradient-to-b from-dark/90 to-dark/50">
+<div class="particles"></div>
+<div class="container mx-auto px-6 relative z-20 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Hallo! Wir sind
+<span class="text-white">XelveTec</span>
+</h1>
+            <p class="text-xl md:text-2xl max-w-2xl mx-auto">Ihr zuverlässiger IT-Partner in Kreuzlingen und der ganzen Schweiz.</p>
+        </div>
+    </section>
+<!-- About Content -->
+<section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6 text-white">Unsere <span class="text-white">Geschichte</span></h2>
+<p class="text-light mb-6">XelveTec wurde 2026 von Kubilay Demirci mit der Vision gegründet, schnelle und zuverlässige IT-Dienstleistungen für Privatpersonen und kleine Unternehmen anzubieten.</p>
+<p class="text-light mb-6">Was als Ein-Mann-Betrieb begann, hat sich zu einem professionellen Service entwickelt, der Kunden in der ganzen Schweiz unterstützt.</p>
+</div>
+                    <div class="bg-dark/50 backdrop-blur-lg p-8 rounded-xl border border-light/10 shadow-xl overflow-hidden">
+        <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?cs=srgb&dl=pexels-luis-gomes-166706-546819.jpg&fm=jpg" alt="IT Service Kreuzlingen Team" class="rounded-lg w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500">
+<div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 bg-black/50 transition-opacity duration-300">
+                            <p class="text-white text-lg font-bold">Professioneller IT-Service</p>
+                        </div>
+                    </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <custom-footer></custom-footer>
+<!-- Scripts -->
+    <script src="components/top-header.js"></script>
+<script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="components/trustpilot.js"></script>
+<script src="script.js"></script>
+    <script>
+        feather.replace();
+
+        // Initialize Lenis smooth scroll
+        const lenis = new Lenis({
+            lerp: 0.07,
+            wheelMultiplier: 1,
+            smoothWheel: true
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        // Handle anchor links with Lenis
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    lenis.scrollTo(target, {
+                        offset: 0,
+                        duration: 1.2
+                    });
+                }
+            });
+        });
+    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Wie sicher ist Fernwartung?","acceptedAnswer":{"@type":"Answer","text":"Verschlüsselte Tools, Daten offline, Schweizer Datenschutz. Du kontrollierst alles."}},{"@type":"Question","name":"Was kostet IT-Support?","acceptedAnswer":{"@type":"Answer","text":"Fernwartung CHF 99, Hausbesuch Kreuzlingen CHF 149. Kostenlose Diagnose."}},{"@type":"Question","name":"Wie lange dauert PC-Reparatur?","acceptedAnswer":{"@type":"Answer","text":"Software 30-60min, Hardware 1-2 Tage, Windows 90min."}},{"@type":"Question","name":"Können Daten gerettet werden?","acceptedAnswer":{"@type":"Answer","text":"Ja, logische Fehler 100%. Kostenlose Diagnose."}},{"@type":"Question","name":"Warum WLAN langsam?","acceptedAnswer":{"@type":"Answer","text":"Router/DNS/Störungen. XelveTec optimiert oft Verdopplung."}},{"@type":"Question","name":"Router sichern?","acceptedAnswer":{"@type":"Answer","text":"WPA3, starkes Passwort, Updates, Gast-Netzwerk. Security-Audit CHF 99."}},{"@type":"Question","name":"Windows Installation?","acceptedAnswer":{"@type":"Answer","text":"Ja, sauber neu mit Updates/Treibern. CHF 199-299."}},{"@type":"Question","name":"Hilft Neustart?","acceptedAnswer":{"@type":"Answer","text":"Ja! 70% Probleme gelöst. Richtig herunterfahren + 30s warten."}},{"@type":"Question","name":"Passwort-Probleme?","acceptedAnswer":{"@type":"Answer","text":"Reset per E-Mail/App. Admin-Password zurücksetzen möglich."}},{"@type":"Question","name":"Reparatur oder neu kaufen?","acceptedAnswer":{"@type":"Answer","text":"Reparatur lohnt bei <5J alt, <40% Neukauf-Preis. Kostenlose Beratung."}}]}</script>
+</body>
+</html>

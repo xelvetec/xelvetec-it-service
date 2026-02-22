@@ -1,0 +1,7 @@
+{
+  "name": "xelvetec-site",
+  "private": true,
+  "devDependencies": {
+    "netlify-plugin-chatbees": "^0.0.0"
+  }
+}

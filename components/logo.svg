@@ -1,0 +1,28 @@
+```svg
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  
+  <!-- Full Logo Version -->
+  <g id="full-logo">
+    <!-- Hexagonal X Symbol with Lightning Bolt -->
+    <g transform="translate(30, 10)">
+      <path id="hexagon" d="M30 0L70 0L100 50L70 100L30 100L0 50Z" fill="#00bfff" opacity="0.9"/>
+      <path id="bolt" d="M45 35L55 35L40 65H50L35 95L45 65H35L50 35Z" fill="#333" opacity="0.8"/>
+    </g>
+    <text x="110" y="65" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="32" fill="#333">elveTec</text>
+  </g>
+  
+  <!-- Symbol-only Version -->
+  <g id="symbol-only" transform="translate(50, 10)">
+    <path d="M30 0L70 0L100 50L70 100L30 100L0 50Z" fill="#00bfff" opacity="0.9"/>
+    <path d="M45 35L55 35L40 65H50L35 95L45 65H35L50 35Z" fill="#333" opacity="0.8"/>
+  </g>
+  
+  <!-- Favicon Version -->
+  <g id="favicon" transform="translate(75, 25) scale(0.5)">
+    <path d="M30 0L70 0L100 50L70 100L30 100L0 50Z" fill="#00bfff" opacity="0.9"/>
+    <path d="M45 35L55 35L40 65H50L35 95L45 65H35L50 35Z" fill="#333" opacity="0.8"/>
+  </g>
+
+</svg>
+```

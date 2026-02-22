@@ -1,0 +1,8 @@
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <path d="M16 0 L32 16 L16 32 L0 16 Z" fill="#c0c0c0"/>
+  <path d="M16 0 L32 16 L24 24 L8 8 Z" fill="#ffffff"/>
+  <path d="M32 16 L16 32 L8 24 L24 8 Z" fill="#e0e0e0"/>
+  <path d="M8 8 L24 24 M24 8 L8 24" stroke="#00bfff" stroke-width="1"/>
+</svg>
+```
